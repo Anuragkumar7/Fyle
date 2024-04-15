@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main border border-dark" >
+
+        <div class="container my-5 px-5">
+            <h2>Income Tax Calculator</h2>
+            <form id="taxForm">
+            <div class="form-group">
+                <div class="d-flex py-2">
+                    <label for="deductions">Enter gross annual income</label>
+                    <div class="input-group-append mx-2 ">
+                        <span class="input-group-text rounded-circle py-0 bg-white" id="grossAnnualIncomeTooltip" data-toggle="tooltip" data-placement="top" title="Gross annual income is your total salary in a year before any deductions">?</span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="grossIncome" placeholder="Enter gross annual income">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="grossIncomeError" title="Please enter numbers only">i</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="d-flex pb-2">
+                    
+                    <label for="deductions">Enter Extra Income</label>
+                    <div class="input-group-append mx-2 ">
+                        <span class="input-group-text rounded-circle py-0 bg-white" id="grossAnnualIncomeTooltip" data-toggle="tooltip" data-placement="top" title="Please Enter numbers only">?</span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="extraIncome" placeholder="Enter extra income from other sources">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ageGroup">Enter age group</label>
+                
+                <select class="custom-select form-control" id="ageGroup">
+                    <option value="">Select age group</option>
+                    <option value="&lt;40">&lt;40</option>
+                    <option value="&le;40 & &lt;60">&le;40 & &lt;60</option>
+                    <option value="&le;60">&le;60</option>
+                </select>
+              </div>
+              
+            
+            <div class="form-group">
+                <div class="d-flex pb-2">
+                    
+                    <label for="deductions">Enter total applicable deductions</label>
+                    <div class="input-group-append mx-2 ">
+                        <span class="input-group-text rounded-circle py-0 bg-white" id="grossAnnualIncomeTooltip" data-toggle="tooltip" data-placement="top" title="Total numbers of applicable deductions">?</span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="deductions" placeholder="Add total applicable deductions">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+        </form>
+    </div>
+</div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="taxModal" tabindex="-1" role="dialog" aria-labelledby="taxModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="taxModalLabel">Tax Calculation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="taxResult"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

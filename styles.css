@@ -1,0 +1,14 @@
+.input-group-text {
+    cursor: pointer;
+}
+
+.tooltip-inner {
+    max-width: 300px;
+}
+.main{
+    margin: 50px 500px;
+}
+.btn{
+    margin-top: 20px;
+    padding: 5px 194px;
+}
